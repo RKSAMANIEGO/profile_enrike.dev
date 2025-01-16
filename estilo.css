@@ -1,0 +1,325 @@
+:root{
+ --color-letra:  rgb(164, 165, 166);
+ --color-btn: rgb(221, 19, 113);
+}
+
+@font-face {
+    font-family: "honey";
+    src: url("./font/Honey\ Ponds.otf") format('opentype');
+    font-family: "tomy";
+    src: url("./font/ToonyLine_PERSONAL_USE_ONLY.otf");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background:linear-gradient( -200deg,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(9, 1, 6),
+    rgb(76, 10, 58));
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*ESTILOS AL HEADER*/
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor:pointer;
+    padding: 10px 20px;
+}
+
+.img-logo{
+    width: 60px;
+    background-color:antiquewhite;
+}
+nav {
+    display: flex;
+    gap: 30px;
+    height: 1.5rem ;
+    transition:1s ease-in;
+}
+nav > a{
+    text-decoration: none;
+    font-weight: 600;
+    color:rgb(103, 9, 104);
+    font-family:'Times New Roman', Times, serif;
+    transition: all 0.4s ease-in-out;
+    width: 7rem;
+    text-align: center;
+}
+a:hover{
+    color:rgb(98, 160, 217);
+    font-size: 25px;
+}
+a:focus{
+    color: rgb(240, 235, 240);
+}
+/*menu*/
+.open_menu{
+    order: 1;
+}
+.open_menu, .close_menu , #check{
+    display: none;
+    cursor: pointer;
+    
+}
+
+.open_menu:hover , .close_menu:hover , #check:hover{
+    color: rgb(202, 12, 129);
+}
+
+@media(max-width:768px){
+    .open_menu, .close_menu{
+        display: block;
+        font-size: 1.5rem;
+        color: var(--color-letra);
+    }
+
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        right: -100vw;
+        z-index: 100;
+
+        background:linear-gradient( -200deg,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0),
+        rgb(9, 1, 6),
+        rgb(76, 10, 58));
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden; 
+    }
+    nav a{
+        color: rgb(55, 165, 216);
+        height: 50px;
+    }
+
+    .close_menu{
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
+
+    #check:checked ~ nav{
+        right: 0;
+    }
+}
+
+
+/*PRESENTACION*/
+.wapper-main{
+    padding: 0 20px;
+}
+.presentacion{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 88vh;
+    width: 100%;
+    gap:20px
+
+}
+.presentacion-context{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+}
+h1{
+        font-family: "Rubik Vinyl", serif;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 11rem;
+        font-size:200px;
+        color: rgb(191, 191, 187);
+        position:relative;
+}
+
+.title-img {
+    display: inline;
+    position: absolute;
+    width: 250px;
+    bottom:140px;
+    right: 20px;
+}
+
+/*COLLAGE*/
+.presentacion-collage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    text-align: center;
+    color: antiquewhite;
+    min-width: 480px;
+
+    background: linear-gradient(to right, transparent 50% , rgb(0, 0, 0)50% ,rgb(0, 0, 0), rgb(73, 3, 64));
+    background-size: 200%;
+    background-position:left;
+    transition: background-position 1s ease-in-out;
+
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius:5rem ;
+    gap: 20px;
+    flex: 1;
+}
+.presentacion-collage:hover{
+    background-position: right;
+}
+
+.presentacion-collage p{
+    padding: 0 20px;
+    text-align: center;
+}
+.presentacion-collage h2{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding: 0px 30px;
+    padding-top: 50px;
+    text-align: center;
+
+
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+}
+.presentacion-collage img{
+    width: 500px;
+}
+
+.presentacion-collage button{
+    padding: 10px 25px;
+    background:linear-gradient(to left, transparent 50% ,var(--color-btn)50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 1s ease-in-out;
+    font-weight: bold;
+    color: rgb(224, 214, 223);
+    border: 1px solid var(--color-btn);
+    margin-bottom: 5px;
+}
+.presentacion-collage button:hover{
+    background-position: left;
+    color: rgb(235, 229, 229);
+    font-weight: bold;
+}
+
+/*BUSCAR*/
+.search{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.search input,button{
+    background-color: transparent;
+    color: blueviolet;
+    border: 1px solid var(--color-btn);
+    border-radius: 20px;
+}
+.search input{
+    width: 100%;
+    padding: 15px 10px;
+    padding-inline-end: 20rem;
+}
+
+
+.search button{
+    position:absolute;
+    right: 0;
+    width: 100px;
+    background: linear-gradient(20deg,rgb(171, 29, 179),rgb(84, 166, 216));
+    color: wheat;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: box-shadow 0.4s linear;
+}
+.search button:hover{
+    background: linear-gradient(20deg,rgb(84, 166, 216),rgb(171, 29, 179));
+    box-shadow: 0px 0px 10px 5px rgb(202, 151, 202);
+}
+
+
+@media(max-width:790px){
+    .presentacion-context h1{
+        font-size:160px;
+    }
+}
+@media(max-width:610px){
+    .presentacion-context h1{
+        font-size:100px;
+        line-height: 5rem;
+    }
+    .title-img {
+        width: 140px;
+        bottom:70px;
+        right: 0;
+    }
+    .search{
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .search input{
+        padding: 10px 40px;
+    }
+    .search button{
+        padding: 10px 20px;
+    }
+    .presentacion-collage h2{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .presentacion-collage p{
+        font-size: 0.9rem;
+    }
+}
+@media(max-width:510px){
+    .presentacion-context h1{
+        font-size:80px;
+        line-height: 5rem;
+    }
+    .title-img {
+        width: 120px;
+        bottom:70px;
+        right: 0;
+    }
+    .search input{
+        padding: 6px 20px;
+    }
+    .search button{
+        padding: 6px;
+    }
+    .presentacion-collage{
+        min-width: 320px;
+    }
+    .presentacion-collage h2{
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+        padding: 0 10px;
+       
+    }
+    .presentacion-collage p{
+        font-size: 0.7rem;
+        padding: 0 10px;
+    }
+}
