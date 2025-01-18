@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My professional profile</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Playwrite+AU+SA:wght@100..400&family=Rubik+Distressed&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Playwrite+AU+SA:wght@100..400&family=Rubik+Distressed&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
-        <!--https://d1csarkz8obe9u.cloudfront.net/posterpreviews/rk-logo-design-template-83bf9879cb7bd01b64381dd4ed79e359_screen.jpg?ts=1701667826-->
         <img class="img-logo" src="https://seeklogo.com/images/R/rk-nutrition-logo-20927478D8-seeklogo.com.png" alt="logo">
         <input type="checkbox" id="check">
         <label for="check" class="open_menu"> &#8801</label>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About Me</a>
-            <a href="#">Projects</a>
-            <a href="#">Skills</a>
+            <a href="#home">Home</a>
+            <a href="#about-me">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
             <label for="check" class="close_menu"> &#215</label>
         </nav>
     </header>
 
-    <div class="wapper-main">
-        <section class="presentacion">
-
-            <div class="presentacion-context">
+    <div class="wapper-main" id="home">
+        <section class="presentacion" >
+            <div class="presentacion-context" >
                 <div class="search">
                     <input type="text" placeholder="Search">
                     <button>Buscar</button>
@@ -40,12 +41,169 @@
             </div>
 
             <div class="presentacion-collage">
-
                 <h2>Apasionado desarrollador de software especializado en la creación de soluciones innovadoras, combinando creatividad y tecnología para transformar ideas en realidad digital.</h2> 
                 <p>Bienvenido a mi página personal, un espacio donde comparto mi perfil <em> profesional</em> y conocimientos como desarrollador <em>Full Stack</em>. Aquí encontrarás información sobre mi experiencia, proyectos destacados, habilidades técnicas y herramientas que utilizo para crear soluciones innovadoras. Mi objetivo es mostrar cómo puedo contribuir al desarrollo de <strong> aplicaciones web </strong>y <strong> móviles</strong> que impulsen la tecnología y brinden valor a cada proyecto.</p>
-                <button>Contactar</button>
+                <button id="cv">Descargar CV</button>
             </div>
         </section>
+
+        <div class="content" id="about-me">
+
+            <section class="section wrapper-about" >
+
+                <article class="about-me quien-soy">
+                    <h2>¿Quién soy?</h2>
+                    <p>Me llamo <strong> Enrike </strong> y soy un desarrollador de software <em>Full Stack</em> con experiencia en la creación de soluciones innovadoras y tecnológicas. Me apasiona la tecnología y la creación de aplicaciones web y moviles expuesto para optar nuevos conocimientos y mejorar mis habilidades tecnicas</p>
+                    <div>
+                        <img src="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" alt="img-quienSoy" class="log">
+                    </div>
+                </article>
+
+                <article class="about-me que-hago">
+                    <h2>¿Qué hago?</h2>
+                    <p>Me dedico a la creación de soluciones tecnológicas innovadoras y
+                    aplicaciones web y móviles que brinden valor a cada proyecto. Mi objetivo es contribuir
+                    al desarrollo de aplicaciones web y móviles que impulsen la tecnología.
+                    </p>
+
+                    <div>
+                        <img src="https://www.pngall.com/wp-content/uploads/2016/07/Web-Design-PNG-Picture.png" alt="log-queHago">
+                    </div>
+
+                </article>
+
+                <article class="about-me enfoque">
+                        <h2>Enfoque</h2>
+                        <p>Me encanta aprender nuevas tecnologías y buscar formas creativas de resolver problemas. Creo en el desarrollo de software como una herramienta para hacer la vida más productiva y eficiente.
+                        </p>
+                    <div>
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/033/164/506/small_2x/3d-abstract-digital-technology-white-light-particles-wave-free-png.png" alt="img-enfoque">
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="skills">
+
+                <section class="section wrapper-skills">
+
+                    <article class="skill">
+                        <div class="skill-full-stack">
+                            <h2>Back End</h2>
+                            <p> Desarrollador Backend con experiencia en la creación de
+                            soluciones escalables utilizando tecnologías como Spring
+                            Boot, Node.js, Java. Brindando soluciones bajo arquitecturas de
+                            microservicios.
+                            Conocimientos en bases de datos como MySQL, PostgreSQL, así como
+                            implementación de <em>IA</em>. Me destaco por mi enfoque en la
+                            resolución de problemas,
+                            capacidad para el trabajo en equipo y familiaridad con
+                            metodologías ágiles.
+                            </p>
+                        </div>
+                        <div class="skill-full-stack">
+                            <h2>Formación</h2>
+
+                            <p>Mi formación incluye el estudio de Desarrollo de Sistemas de Información, complementado con la participación en bootcamps intensivos y el aprendizaje continuo a través de cursos en línea. Como desarrollador autodidacta, me destaco por mi habilidad para investigar y asimilar nuevos conceptos, apoyándome siempre en una sólida base de documentación técnica para desarrollar soluciones efectivas y actualizadas.</p>
+                        </div>
+                    </article>
+
+                    <article class="skill imagen-robot">
+
+                        <h2>Full Stack</h2>
+                        <img src="https://i.pinimg.com/originals/04/8f/24/048f2432a46f50d0053ced22c5934aa9.png" alt="img-prof">
+
+                    </article>
+
+                    <article class="skill">
+                    <div class="skill-full-stack">
+                        <h2>Front End</h2>
+                        <p>
+                            En el desarrollo frontend utilizando tecnologías como
+                            HTML, CSS y JavaScript, junto con frameworks modernos como React.
+                            He trabajado en la creación de interfaces de usuario responsivas,
+                            intuitivas y visualmente atractivas, asegurándome de que sean
+                            funcionales tanto en dispositivos móviles como en escritorio.
+                            Me enfoco en brindar una excelente experiencia al usuario, optimizando
+                            el rendimiento y la accesibilidad en cada proyecto.
+                        </p>
+                    </div>
+
+                    <div class="skill-full-stack">
+                        <h2>Experiencia</h2>
+                        <p>
+                            Tengo experiencia en el desarrollo de software <em> <strong>Full Stack</strong></em> , trabajando con tecnologías como Java, Spring Boot, React y bases de datos como MySQL y SQL Server. He participado en la creación de sistemas web y móviles, desde la implementación de backends seguros y eficientes hasta el diseño de interfaces de usuario intuitivas. Mi enfoque está en ofrecer soluciones tecnológicas funcionales y escalables que cumplan con las necesidades del usuario
+                        </p>
+                    </div>
+                    </article>
+                </section>
+
+                <section class="wrapper-lenguages">
+                <img src="data:image/png;base64,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" alt="spring-boot">
+                <img src="https://img.icons8.com/win10/600/FFFFFF/node-js.png" alt="git-hub">
+                <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icono-del-lenguaje-de-programacion-java.png" alt="java">
+                <img src="https://miro.medium.com/v2/resize:fit:960/1*h7GMfvHKvLPkynG9NvULJw.gif" alt="react">
+                <img src="https://static.vecteezy.com/system/resources/previews/027/127/560/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="js">
+                <img src="https://images.seeklogo.com/logo-png/42/2/css-3-logo-png_seeklogo-426083.png" alt="css">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="html">
+
+                </section>
+
+            </section>
+
+            <section class="section wrapper-contact" id="contact">
+                <article class="contact-fondo"> </article>
+
+                <article class="contact-fondo none">
+                    <div></div>
+                    <div>
+                        <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-logotipo-de-facebook-5476193-4602444.png?f=webp" alt="redes-sociales"> 
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/022/493/583/small/3d-render-whatsapp-logo-icon-with-new-notification-isolated-on-transparent-background-free-png.png" alt="redes-sociales"> 
+                    </div>
+                </article>
+
+                <article class="contact-fondo form">
+                    <form class="formulario">
+                        <h2 class="title">Contactame</h2>
+                        <input type="text" placeholder="Nombre Completos">
+                        <input type="text" placeholder="Correo Electronico">
+                        <textarea rows="4" placeholder="Asunto..."></textarea>
+                        <button class="btn-enviar">Enviar</button>
+                    </form>
+                </article>
+            </section>
+
+            <section class="section footer">
+                <section class="footer-context">
+                <div class="footer-content">
+                    <p>Sobre Mi</p>
+                    <a href="https://www.facebook.com/enrikerod.samaniego/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.link/1ip4c5" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/enrike-rod-keler-samaniego-guzman/?trk=opento_sprofile_goalscard" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/RKSAMANIEGO" target="_blank">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+
+                <div>
+                    <p>¿Tienes un proyecto en mente?</p>
+                    <a href="#contact">¡Hablemos!</a>
+                </div>
+            </section>
+                <div>
+                    <p>&copy; Enrike Rod Keler Samaniego Guzman | Todos los derechos reservados.</p>
+                </div>
+            </section>
+        </div>
+
+
+
     </div>
 
 

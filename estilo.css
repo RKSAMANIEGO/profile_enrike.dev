@@ -26,7 +26,9 @@ body{
     rgb(76, 10, 58));
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
+/******************************************** HOME **********************************************************/
 
 /*ESTILOS AL HEADER*/
 header{
@@ -35,6 +37,11 @@ header{
     align-items: center;
     cursor:pointer;
     padding: 10px 20px;
+
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
 }
 
 .img-logo{
@@ -50,7 +57,7 @@ nav {
 nav > a{
     text-decoration: none;
     font-weight: 600;
-    color:rgb(103, 9, 104);
+    color:rgb(204, 186, 162);
     font-family:'Times New Roman', Times, serif;
     transition: all 0.4s ease-in-out;
     width: 7rem;
@@ -70,7 +77,6 @@ a:focus{
 .open_menu, .close_menu , #check{
     display: none;
     cursor: pointer;
-    
 }
 
 .open_menu:hover , .close_menu:hover , #check:hover{
@@ -103,7 +109,7 @@ a:focus{
         justify-content: center;
         align-items: center;
 
-        overflow: hidden; 
+        overflow: hidden;
     }
     nav a{
         color: rgb(55, 165, 216);
@@ -124,7 +130,9 @@ a:focus{
 
 /*PRESENTACION*/
 .wapper-main{
-    padding: 0 20px;
+    padding-top: 40px;
+    padding-inline: 20px;
+    /*padding: 40px 20px;*/
 }
 .presentacion{
     display: flex;
@@ -248,7 +256,7 @@ h1{
     position:absolute;
     right: 0;
     width: 100px;
-    background: linear-gradient(20deg,rgb(171, 29, 179),rgb(84, 166, 216));
+    background: linear-gradient(to top,#f3efefcc,rgba(30, 66, 184, 0.8));
     color: wheat;
     padding: 15px 10px;
     cursor: pointer;
@@ -259,13 +267,442 @@ h1{
     box-shadow: 0px 0px 10px 5px rgb(202, 151, 202);
 }
 
+/******************************************** ABOUT ME **********************************************************/
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border: 20px 0;
+    padding-top: 50px;
+}
 
+.section {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 20px;
+    gap: 20px;
+    color: rgb(240, 238, 238);
+
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*ABOUT ME SECTIONS*/
+
+.about-me{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(to bottom ,rgb(0,0,0,0.8),rgb(59, 8, 25), rgb(0,0,0,0.8));
+    padding: 20px;
+    gap: 20px;
+    transition: opacity 0.6s ease-in-out;
+}
+.about-me div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-about p{
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.wrapper-about h2{
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+}
+.wrapper-about img{
+    max-width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.wrapper-about:hover > :not(:hover) {
+    opacity: 0.2;
+}
+
+/******************************************** SKILLS *****************************************************/
+.wrapper-skills{
+    display: flex;
+    flex: 1;
+}
+.wrapper-skills h2{
+    font-family: "Dancing Script", serif;
+    margin: 0;
+    font-size: 3rem;
+}
+.wrapper-skills p{
+    font-size: 1rem;
+}
+
+.wrapper-skills .imagen-robot h2{
+    font-size: 4rem;
+}
+.wrapper-skills img{
+    max-width: 100%;
+}
+.skill{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: justify;
+}
+.imagen-robot img{
+    transition: all 0.5s ease-in-out;
+}
+
+.imagen-robot img:hover{
+    transform: scale(1.1);
+    rotate: 5deg;
+}
+.skill:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+.skill-full-stack{
+   /* border: 1px solid rgb(31, 30, 30);*/
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+
+    background: linear-gradient(to right, transparent 50%,rgb(0,0,0,0.8)50%,rgb(59, 8, 25), rgb(0,0,0,0.8));
+    background-position: left;
+    background-size: 200%;
+    transition: background-position 0.6s ease-in-out;
+    box-shadow: 10px 0 15px rgb(32, 32, 32);
+}
+
+.skill-full-stack ul{
+    padding-top: 2;
+}
+.skill-full-stack ul li{
+font-size: 1rem;
+}
+
+.skill-full-stack:hover{
+    background-position: right;
+    border: transparent;
+}
+
+
+/*imagenes de los lenguajes*/
+.wrapper-lenguages{
+    display: flex;
+    justify-content: space-between;
+    transition: 1s ease-in-out;
+    padding-inline: 20px;
+}
+.wrapper-lenguages img{
+    max-width: 100px;
+    min-width: none;
+    max-height: 100px;
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrapper-lenguages:hover > :not(:hover){
+    opacity: 0.5;
+    transform: scale(0.5);
+}
+/******************************************** CONTACT *****************************************************/
+.wrapper-contact{
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: end;
+    width: 100%;
+    height: 70vh;
+}
+.contact-fondo{
+    flex: 2;
+    background-image: url("https://kalhec.com/kalhec/wp-content/uploads/2019/03/fondo-contacto.png");
+    background-size:cover;
+    background-position: top;
+    border-radius: 20px;
+    width: 60%;
+}
+.none{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    background: transparent;
+}
+.none img{
+    max-width:100px;
+}
+.form{
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 80px;
+    left: 0;
+    background:linear-gradient(to top, rgba(7, 7, 7, 0.5), rgba(59, 8, 25, 0.8), rgba(7, 7, 7, 0.5));
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    height: 100%;
+}
+.formulario input, textarea{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+.formulario button{
+    padding: 10px 20px;
+    color: antiquewhite;
+    background: linear-gradient(to right, transparent 50%, rgb(221, 19, 113)50%);
+    background-size: 200%;
+    background-position: left;
+    transition: all 1s ease-in-out;
+    font-weight: bold;
+}
+.formulario button:hover{
+    background-position: right;
+}
+
+/******************************************** FOOTER *****************************************************/
+.footer{
+    background-color: black;
+    height:60vh;
+    box-shadow: 0 0 1px  25px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.footer-context{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer h5{
+    font-size: 1.1rem;
+}
+
+.footer p{
+    font-size: 1rem;
+}
+.footer a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding-inline: 10px;
+    color: rgb(124, 9, 76);
+}
+.footer-content i:hover, .footer a:hover{
+    color: rgb(199, 174, 92);
+}
+
+
+.fa-facebook{
+    color: #0c4dda;
+}
+.fa-whatsapp{
+    color: rgb(8, 116, 53);
+}
+.fa-linkedin{
+    color: rgb(105, 170, 240);
+}
+.fa-square-github{
+    color: rgb(240, 238, 238);
+}
+
+
+
+@media(max-width:1200px){
+    .wapper-main{
+        padding-top: 90px;
+        padding-inline: 20px;
+    }
+    .presentacion{
+        margin-bottom: 18rem;
+    }
+    .wrapper-skills p{
+        font-size: 0.8rem;
+    }
+    .imagen-robot{
+        justify-content: center;
+    }
+
+
+
+    /*ABOUT ME*/
+    .wrapper-about{
+        height: 90vh;
+    }
+    .wrapper-about h2{
+        text-align: center;
+    }
+
+    /*SKILL*/
+    .skill-full-stack h2{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .skill-full-stack p{
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    /*CONTACT*/
+    .contact-fondo:first-child{
+        max-height: 150px;
+        width: 80%;
+    }
+}
 @media(max-width:790px){
+    /*HOME*/
+    .wapper-main{
+        padding-top: 90px;
+        padding-inline: 20px;
+        /*padding: 40px 20px;*/
+    }
+    .presentacion{
+        margin-bottom: 18rem;
+    }
     .presentacion-context h1{
         font-size:160px;
     }
+
+    /*ABOUT ME*/
+    .wrapper-about{
+    flex-direction: column;
+    }
+    .about-me{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-me img{
+        max-width: 100px;
+    }
+    .wrapper-about h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .wrapper-about p{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /*SKILLS*/
+    .wrapper-skills{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .skill{
+        flex-direction: row;
+    }
+
+    .wrapper-skills .imagen-robot{
+        flex-direction: row;
+        order: -1;
+    }
+
+    .wrapper-skills .imagen-robot img:hover{
+        transform: scale(1.5);
+        rotate: none;
+    }
+
+    .wrapper-skills img{
+        max-width: 100px;
+    }
+
+    .skill-full-stack{
+        flex-direction: row;
+    }
+    .skill h2{
+        font-size: 2.5rem;
+    }
+    .skill p{
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .wrapper-lenguages{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .wrapper-lenguages img{
+        width: 80px;
+    }
+    /*CONTACT*/
+    .contact-fondo:first-child{
+        flex: 1;
+    }
+
+    .none img{
+        max-width:60px;
+    }
+
+    .form{
+        width: 70%;
+    }
+    .formulario h2{
+        font-size: 2.5rem;
+    }
+    .formulario input{
+        padding-block: 5px ;
+        border-radius: 5px;
+    }
+
+    /*FOOTER*/
+    .footer{
+        height: 40vh;
+    }
+    .footer-context{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
+@media(max-width:700px){
+    .presentacion{
+        margin-bottom: 21rem;
+    }
+    .footer p{
+        font-size: 0.9rem;
+    }
+}
+
 @media(max-width:610px){
+
+    /*PRESENTACION*/
+    .presentacion{
+        margin-bottom: 5rem;
+    }
+
     .presentacion-context h1{
         font-size:100px;
         line-height: 5rem;
@@ -292,8 +729,136 @@ h1{
     .presentacion-collage p{
         font-size: 0.9rem;
     }
+    /*ABOUT ME*/
+
+    .wrapper-about h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .wrapper-about p{
+        font-size: 0.6rem;
+        text-align: center;
+        text-align: start;
+    }
+    /**/
+    .wrapper-skills{
+        height: 200vh;
+    }
+    /*CONTACT*/
+    .none img{
+        max-width:50px;
+    }
+    .formulario input,textArea{
+        border-radius: 5px;
+    }
+    /*FOOTER*/
+    .footer{
+        height: 40vh;
+    }
+    .footer p{
+        font-size: 0.8rem;
+    }
 }
+
 @media(max-width:510px){
+
+        /*ABOUT ME*/
+        .wrapper-about{
+            height: 110vh;
+        }
+        .about-me{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+        }
+        .wrapper-about h2{
+            font-size: 1.3rem;
+        }
+        .wrapper-about p{
+            font-size: 0.6rem;
+            text-align: center;
+        }
+        .about-me img{
+            max-width: 80px;
+        }
+        /*SKILL*/
+        .wrapper-skills{
+            height: 200vh;
+        }
+
+        .wrapper-skills .imagen-robot{
+            align-items: center;
+        }
+        .wrapper-skills .imagen-robot h2{
+            font-size: 2rem;
+        }
+        .wrapper-skills h2{
+            font-size: 1.3rem;
+        }
+        .wrapper-skills .imagen-robot img:hover{
+        transform: scale(1.2);
+        rotate: none;
+        }
+        .skill{
+        flex-direction: column;
+        }
+        .skill-full-stack{
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+        }
+        .wrapper-lenguages img{
+            max-width: 40px;
+        }
+
+        /*CONTACT*/
+        .wrapper-contact{
+            height: 40vh;
+        }
+        .form{
+            top: 50px;
+        }
+        .formulario{
+            justify-content: center;
+            gap: 10px;
+        }
+        .formulario h2{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .formulario input,textArea{
+            width: 150px;
+            padding:3px 10px;
+            font-size: 0.6rem;
+            resize: none;
+            border-radius: 5px;
+        }
+        .formulario button{
+            padding: 5px 10px;
+            font-size: 0.6rem;
+        }
+        .none img:first-child{
+            display: none;
+        }
+        .contact-fondo:first-child{
+            max-height: 80px;
+            width: 90%;
+        }
+        /*FOOTER*/
+        .footer p{
+            font-size: 0.7rem;
+        }
+        .footer i{
+            font-size: 1rem;
+            padding: 0;
+        }
+
+
+    /*PRESENTACION*/
+    .presentacion{
+        margin-bottom: 3rem;
+    }
     .presentacion-context h1{
         font-size:80px;
         line-height: 5rem;
@@ -316,7 +881,6 @@ h1{
         font-size: 1.5rem;
         line-height: 1.2rem;
         padding: 0 10px;
-       
     }
     .presentacion-collage p{
         font-size: 0.7rem;
