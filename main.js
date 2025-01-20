@@ -21,7 +21,7 @@ const cv = document.getElementById("cv");
 
 cv.addEventListener("click", () => {
   const file = document.createElement("a");
-  file.href = "./file/CV_Rksam.pdf";
-  file.download = "CV_Rksam.pdf";
+  file.href = "./file/Cv_enrike_dev.pdf";
+  file.download = "CV_enrike_dev.pdf";
   file.click();
 });
