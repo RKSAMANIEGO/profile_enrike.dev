@@ -34,6 +34,7 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
+    const name = "enrike".toUpperCase();
     emailjs.init("qgxNZ2ApPchAyh1UK");
     btn.value = "Enviando...";
 
@@ -44,6 +45,10 @@ document
       () => {
         btn.value = "Email Enviado";
         alert("Enviado!");
+        document.getElementById("name-complete").value = "";
+        document.getElementById("email-request").value = "";
+        document.getElementById("asunto").value = "";
+        //form.reset();
       },
       (err) => {
         btn.value = "Email Enviado";
