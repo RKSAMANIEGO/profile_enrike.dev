@@ -25,3 +25,29 @@ cv.addEventListener("click", () => {
   file.download = "Cv_enrike_dev.pdf";
   file.click();
 });
+
+/*CONSUMIR FORMULARIO*/
+const btn = document.querySelector(".btn-enviar");
+
+document
+  .querySelector(".formulario")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.init("qgxNZ2ApPchAyh1UK");
+    btn.value = "Enviando...";
+
+    const serviceID = "default_service";
+    const templateID = "template_cuf9ntu";
+
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        btn.value = "Email Enviado";
+        alert("Enviado!");
+      },
+      (err) => {
+        btn.value = "Email Enviado";
+        alert(JSON.stringify(err));
+      }
+    );
+  });

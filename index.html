@@ -165,10 +165,10 @@
                 <article class="contact-fondo form">
                     <form class="formulario">
                         <h2 class="title">Contactame</h2>
-                        <input type="text" placeholder="Nombre Completos">
-                        <input type="text" placeholder="Correo Electronico">
-                        <textarea rows="4" placeholder="Asunto..."></textarea>
-                        <button class="btn-enviar">Enviar</button>
+                        <input type="text" placeholder="Nombre Completos"  name="to_name" required>
+                        <input type="text" placeholder="Correo Electronico" name="from_name" required>
+                        <textarea rows="4" placeholder="Asunto..." name="message"></textarea required>
+                        <button type="submit" class="btn-enviar" >Enviar</button>
                     </form>
                 </article>
             </section>
@@ -210,5 +210,10 @@
 
 
     <script src="./main.js"></script>
+
+  
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 </body>
 </html>
