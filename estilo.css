@@ -130,7 +130,7 @@ a:focus{
 
 /*PRESENTACION*/
 .wapper-main{
-    padding-top: 40px;
+    padding-top: 60px;
     padding-inline: 20px;
     /*padding: 40px 20px;*/
 }
@@ -542,7 +542,7 @@ font-size: 1rem;
 
 @media(max-width:1200px){
     .wapper-main{
-        padding-top: 90px;
+        padding-top: 100px;
         padding-inline: 20px;
     }
     .presentacion{
